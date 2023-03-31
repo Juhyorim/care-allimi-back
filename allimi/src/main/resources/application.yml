@@ -1,7 +1,5 @@
 
 
-
-
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -9,3 +7,15 @@ spring:
     username: root
     password: liMe1234@@
 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      # show_sql: true
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+# org.hibernate.type: trace #??? ?? 2.x, hibernate5
+# org.hibernate.orm.jdbc.bind: trace #??? ?? 3.x, hibernate6
